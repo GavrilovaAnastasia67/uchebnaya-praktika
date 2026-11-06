@@ -6,18 +6,23 @@
     <title>«Расписание — Гаврилова Анастасия и Кириллова Диана</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Обо мне</a></li>
-            <li><a href="hobby.html">Мои увлечения</a></li>
-            <li><a href="college.html">Мой колледж</a></li>
-            <li><a href="season.html">Моё любимое время года</a></li>
-            <li><a href="schedule.html">Расписание</a></li>
-            <li><a href="application.html">Заявка</a></li>
-        </ul>
-    </nav>
-    <h1>Моё учебное расписание</h1> 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Обо мне</a></li>
+                <li><a href="hobby.html">Мои увлечения</a></li>
+                <li><a href="college.html">Мой колледж</a></li>
+                <li><a href="season.html">Моё время года</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="application.html">Заявка</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <h1>Моё учебное расписание</h1>
     <p>Учебный пример, не официальное расписание группы</p>
+    
     <table>
         <caption>Занятия на два учебных дня</caption>
         <thead>
@@ -26,24 +31,28 @@
                 <th scope="col">Пара</th>
                 <th scope="col">Занятие</th>
                 <th scope="col">Кабинет</th>
+                <th scope="col">Преподаватели</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th rowspan="3" scope="rowgroup">Понедельник</th>
                 <td>1</td>
-                <td>ААС</td>
+                <td>АИС</td>
                 <td>401</td>
+                <td>Макарова</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>ОСИС</td>
+                <td>ОСиС</td>
                 <td>400</td>
+                <td>Козлова</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>ОСИС</td>
+                <td>ОСиС</td>
                 <td>400</td>
+                <td>Козлова</td>
             </tr>
         </tbody>
         <tbody>
@@ -52,28 +61,34 @@
                 <td>1</td>
                 <td>Математика</td>
                 <td>306</td>
+                <td>Васильева</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Математика</td>
                 <td>306</td>
+                <td>Васильева</td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>Физ-ра</td>
                 <td>спортзал</td>
+                <td>Волков</td>
             </tr>
         </tbody>
-        <tfoot>
-            <tr>
-                <th colspan="3" scope="row">Всего пар</th>
-                <td>6</td>
-            </tr>
+    <tfoot>
+        <tr>
+            <th colspan="3" scope="row">Всего пар</th>
+            <td>6</td>
+        
+        </tr>
         </tfoot>
     </table>
-    <h2>Как читать расписание</h2>
-    <p>
-        Данное расписание структурировано по дням недели, где каждый день выделен в отдельный смысловой блок данных. 
-        Благодаря объединению строк, название дня недели указывается один раз и относится сразу к трем учебным парам подряд. 
-    </p>
+</main>
+
+<h2>Как читать расписание</h2>
+<p>
+    Данное расписание структурировано по дням недели, где каждый день выделен в отдельный смысловой блок данных.
+    Благодаря объединению строк, название дня недели указывается один раз и относится сразу к трем учебным парам подряд.
+</p>
 </html>

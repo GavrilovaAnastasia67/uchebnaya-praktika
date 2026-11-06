@@ -16,64 +16,67 @@
             <li><a href="application.html">Заявка</a></li>
         </ul>
     </nav>
-    <h1>Заявка на учебный кружок</h1> 
-    <p>Это учебная форма. Вводите вымышленные данные. Заявка не сохраняется и не поступает организатору</p>
-    <form action="application.html" method="get">
-        <p>
-          <label for="student">Учебное имя</label>
-          <input id="student" name="student" type="text"
-                 minlength="2" required>
-        </p>
-        <p>
-          <label for="email">Учебная почта</label>
-          <input id="email" name="email" type="email"
-                 placeholder="student@example.com" required>
-        </p>
-        <p>
-          <label for="phone">Телефон из 11 цифр</label>
-          <input id="phone" name="phone" type="tel"
-                 pattern="[0-9]{11}" required
-                 aria-describedby="phone-help">
-          <small id="phone-help">Без пробелов и знака плюс</small>
-        </p>
-        <p>
-          <label for="date">Желаемая дата занятия</label>
-          <input id="date" name="date" type="date" required>
-        </p>
-        <fieldset>
-            <legend>Формат занятий</legend>
-            <p><input id="offline" type="radio" name="format"
-                      value="offline" required>
-               <label for="offline">В колледже</label></p>
-            <p><input id="online" type="radio" name="format"
-                      value="online">
-               <label for="online">Дистанционно</label></p>
-               <p>
-                <input id="hybrid" type="radio" name="format" value="hybrid">
-                <label for="hybrid">Смешанный формат</label>
+
+    <main>
+        <h1>Заявка на учебный кружок</h1>
+        <p>Это учебная форма. Вводите вымышленные данные. Заявка не сохраняется и не поступает организатору</p>
+        
+        <form action="application.html" method="get">
+            <p>
+                <label for="student">Учебное имя</label>
+                <input id="student" name="student" type="text" minlength="2" pattern="^[А-ЯЁа-яёA-Za-z][-а-яёА-ЯЁa-zA-Z]*$" required>
             </p>
-          </fieldset>
-          <p>
-            <label for="topic">Направление</label>
-            <select id="topic" name="topic" required>
-              <option value="">Выберите направление</option>
-              <option value="html">HTML</option>
-              <option value="git">Git</option>
-              <option value="css">CSS</option>
-            </select>
-          </p>
-          <p>
-            <input id="reminder" name="reminder" type="checkbox"
-                   value="yes">
-            <label for="reminder">Добавить учебное напоминание</label>
-          </p>
-          <p>
-            <label for="comment">Чему хотите научиться</label>
-            <textarea id="comment" name="comment" rows="4"
-             maxlength="300" required></textarea>
-          </p>
-          <button type="submit">Отправить учебный пример</button>
-          <button type="reset">Сбросить поля</button>
+            <p>
+                <label for="email">Учебная почта</label>
+                <input id="email" name="email" type="email" placeholder="student@example.com" required>
+            </p>
+            <p>
+                <label for="phone">Телефон из 11 цифр</label>
+                <input id="phone" name="phone" type="tel" pattern="[0-9]{11}" required aria-describedby="phone-help">
+                <small id="phone-help">Без пробелов и знака плюс</small>
+            </p>
+            <p>
+                <label for="date">Желаемая дата занятия</label>
+                <input id="date" name="date" type="date" required>
+            </p>
+            
+            <fieldset>
+                <legend>Формат занятий</legend>
+                <p>
+                    <input id="offline" type="radio" name="format" value="offline" required>
+                    <label for="offline">В колледже</label>
+                </p>
+                <p>
+                    <input id="online" type="radio" name="format" value="online">
+                    <label for="online">Дистанционно</label>
+                </p>
+                <p>
+                    <input id="hybrid" type="radio" name="format" value="hybrid">
+                    <label for="hybrid">Смешанный формат</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <label for="topic">Направление</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Выберите направление</option>
+                    <option value="html">HTML</option>
+                    <option value="git">Git</option>
+                    <option value="css">CSS</option>
+                </select>
+            </p>
+            <p>
+                <input id="reminder" name="reminder" type="checkbox" value="yes">
+                <label for="reminder">Добавить учебное напоминание</label>
+            </p>
+            <p>
+                <label for="comment">Чему хотите научиться</label>
+                <textarea id="comment" name="comment" rows="4" maxlength="300" required></textarea>
+            </p>
+            
+            <button type="submit">Отправить учебный пример</button>
+            <button type="reset">Сбросить поля</button>
         </form>
+    </main>
 </body>
 </html>
