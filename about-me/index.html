@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
     <title>Обо мне — Гаврилова Анастасия</title>
 </head>
 <body>
     <header>
     <p>Учебный сайт студента ИС-1-25</p>
-    <nav aria-label="Главное меню">
+    <nav class="main-nav">
         <ul>
             <li><a href="index.html">Обо мне</a></li>
             <li><a href="hobby.html">Мои увлечения</a></li>
             <li><a href="college.html">Мой колледж</a></li>
-            <li><a href="season.html">Моё время года</a></li>
+            <li><a href="season.html">Моё любимое время года</a></li>
             <li><a href="schedule.html">Расписание</a></li>
             <li><a href="application.html">Заявка</a></li>
+            <li><a href="club.html">Клуб</a></li>
         </ul>
     </nav>
 </header>
     <main>
         <h1 id="top">Обо мне</h1>
-        <p>Я начинающий веб разработчик, учусь в колледже с интузиазмом</p>
+        <p> Я начинающий <strong>веб разработчик</strong>,<em>учусь в колледже</em><strong>с интузиазмом</strong></p>
         <section aria-labelledby="about">
             <h2 id="about">Кто я</h2>
             <img src="img/me.jpg" alt="Фотография: Гаврилова Анастасия" width="300">
-        </section>
         <section aria-labelledby="study">
             <h2 id="study">Моя учёба</h2>
             <p>Учусь создавать сайты</p>
@@ -40,13 +41,13 @@
         <p><em>Джейсон Стэтхем</em></p>
         <h2>Полезные ссылки</h2>
 <ul>
-    <li><a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank"
+    <li><a class="external-link" href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank"
         rel="noopener noreferrer">Справочник MDN по HTML</a></li>
-    <li><a href="https://chetk.info/" target="_blank" rel="noopener noreferrer">Сайт колледжа</a></li>
-    <li><a href="https://ru.wikipedia.org/wiki/Веб-разработка" target="_blank" rel="noopener noreferrer">Что такое веб-разработка</a></li>
-    <li><a href="nastyaga1147@gmail.com">Написать мне письмо</a></li>
+    <li><a class="external-link" href="https://chetk.info/" target="_blank" rel="noopener noreferrer">Сайт колледжа</a></li>
+    <li><a class="external-link" href="https://ru.wikipedia.org/wiki/Веб-разработка" target="_blank" rel="noopener noreferrer">Что такое веб-разработка</a></li>
+    <li><a class="external-link" href="nastyaga1147@gmail.com">Написать мне письмо</a></li>
 </ul>
-<footer>
+<footer class="page-footer">
     <p>Автор: Гаврилова Анастасия и Кириллова Диана. Учебная практика УП.09.</p>
    </footer>
     <p><a href="#top">Наверх</a></p>
