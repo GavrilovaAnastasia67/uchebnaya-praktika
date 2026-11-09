@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лаборатория позиционирования</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Обо мне</a></li>
+                <li><a href="hobby.html">Мои увлечения</a></li>
+                <li><a href="college.html">Мой колледж</a></li>
+                <li><a href="season.html">Моё любимое время года</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="application.html">Заявка</a></li>
+                <li><a href="club.html">Клуб</a></li>
+                <li><a href="flex-lab.html">Flexbox</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="grid-lab.html" aria-current="page"> CSS Grid</a> </li>
+                <li><a href="position-lab.html" aria-current="page">Позиционирование</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="top">
+        <h1>Лаборатория позиционирования</h1>
+        <p class="lead">Исследуем relative, absolute и sticky.</p>
+        <nav class="page-tools" aria-label="Навигация по лабораторной">
+            <a href="#relative-demo">Relative и absolute</a>
+            <a href="#sticky-demo">Sticky</a>
+            <a href="#top">Наверх</a>
+          </nav>
+
+        <section id="relative-demo">
+            <h2>Relative и absolute</h2>
+            <div class="position-box">
+                <span class="badge">Новинка</span>
+                <h3>Учебная карточка</h3>
+                <p>Значок размещён относительно этой карточки.</p>
+            </div>
+        </section>
+
+        <section id="sticky-demo" class="long-text">
+            <h2>Проверка прокрутки</h2>
+            <p>Уменьшите высоту окна и прокрутите страницу.</p>
+            <p>Пояснение к выполнению лабораторной работы
+                Работа завершает тему Flexbox и Grid. Вы создадите отдельный стенд position-lab.html,
+                дополните catalog.html и выполните самостоятельную страницу promo.html. Основную
+                раскладку страниц оставляйте в обычном потоке, Flexbox и Grid. Position используйте
+                только для значка, закреплённой панели и исследования поведения элементов.
+                Перед работой откройте git-lab в VS Code, выполните git status и убедитесь, что
+                изменения прошлой пары сохранены. Все HTML-файлы размещайте в папке about-me,
+                изображения — в about-me/img, стили добавляйте в конец about-me/style.css. После
+                каждого шага сохраните файлы, обновите Live Server и сравните ожидаемый результат
+                с браузером.
+                Время: 120 минут. Итог: position-lab.html с опытами relative, absolute и sticky;
+                catalog.html со значками карточек и липким подвалом; promo.html для
+                самостоятельной проверки; валидный HTML и CSS; коммит и запись в дневнике.
+                .</p>
+        </section>
+         <p><a href="#top">Наверх</a></p>
+    </main>
+
+    <footer class="page-footer">
+        <p>Автор: Гаврилова Анастасия. Учебная практика УП.09.</p>
+    </footer>
+</body>
+</html>

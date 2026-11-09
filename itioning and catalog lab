@@ -1,0 +1,14 @@
+ about-me/application.html  |  2 [32m++[m
+ about-me/catalog.html      |  8 [32m+++++[m[31m-[m
+ about-me/club.html         |  2 [32m++[m
+ about-me/college.html      |  2 [32m++[m
+ about-me/flex-lab.html     |  4 [32m++[m[31m-[m
+ about-me/grid-lab.html     |  3 [32m++[m
+ about-me/hobby.html        |  2 [32m++[m
+ about-me/index.html        |  2 [32m++[m
+ about-me/position-lab.html | 71 [32m++++++++++++++++++++++++++++++++++++++++++++++[m
+ about-me/schedule.html     |  2 [32m++[m
+ about-me/season.html       |  2 [32m++[m
+ about-me/style.css         | 62 [32m+++++++++++++++++++++++++++++++++++++++[m[31m-[m
+ about-me/styles-check.html |  2 [32m++[m
+ 13 files changed, 161 insertions(+), 3 deletions(-)

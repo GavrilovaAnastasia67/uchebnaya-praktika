@@ -19,12 +19,14 @@
                 <li><a href="application.html">Заявка</a></li>
                 <li><a href="club.html">Клуб</a></li>
                 <li><a href="flex-lab.html">Flexbox</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
                 <li><a href="grid-lab.html" aria-current="page"> CSS Grid</a> </li>
+                <li><a href="position-lab.html" aria-current="page">Позиционирование</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Каталог учебных направлений</h1>
+        <h1 id="top">Каталог учебных направлений</h1>
         <p class="lead">
         Выберите направление, которое хотите изучать дальше.
         Карточки автоматически перестраиваются в зависимости
@@ -32,6 +34,7 @@
         </p>
         <div class="catalog-grid">
         <!-- Карточка 1 -->
+        <span class="card-badge">Новинка</span>
         <article class="product-card">
         <img src="img/html.jpg" alt="HTML-код на экране редактора">
         <h2>HTML</h2>
@@ -47,6 +50,7 @@
         </a>
         </article>
         <!-- Карточка 2 -->
+        <span class="card-badge">Выбор группы</span>
         <article class="product-card">
         <img
         src="img/css.jpg"
@@ -85,6 +89,8 @@
         </a>
         </article>
         </div>
+         <p><a href="#top">Наверх</a></p>
+         <p class="back-to-top">
         </main>
         <footer class="page-footer">
         <p>
