@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учебный интенсив</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <p>Учебный сайт студента ИС-1-25</p>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Обо мне</a></li>
+                <li><a href="hobby.html">Мои увлечения</a></li>
+                <li><a href="college.html">Мой колледж</a></li>
+                <li><a href="season.html">Моё любимое время года</a></li>
+                <li><a href="schedule.html">Расписание</a></li>
+                <li><a href="application.html">Заявка</a></li>
+                <li><a href="club.html">Клуб</a></li>
+                <li><a href="flex-lab.html">Flexbox</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="grid-lab.html" aria-current="page"> CSS Grid</a> </li>
+                <li><a href="position-lab.html" aria-current="page">Позиционирование</a></li>
+                <li><a href="form-style-lab.html" aria-current="page">Учебный интенсив</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="page-container">
+        <h1>Заявка на учебный интенсив</h1>
+        <p id="form-help">Поля со звёздочкой обязательны.</p>
+      
+        <form class="study-form" action="#" method="post" aria-describedby="form-help">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="student-name">Имя и фамилия *</label>
+              <input placeholder=" " id="student-name" name="student-name" type="text" required autocomplete="name">
+            </div>
+      
+            <div class="form-field">
+              <label for="student-email">Электронная почта *</label>
+              <input placeholder=" " id="student-email" name="student-email" type="email" required autocomplete="email">
+              <small>Пример: student@example.ru</small>
+            </div>
+      
+            <div class="form-field form-field--wide">
+              <label for="course">Направление *</label>
+              <select id="course" name="course" required>
+                <option value="">Выберите направление</option>
+                <option value="html">HTML и CSS</option>
+                <option value="git">Git и GitHub</option>
+                <option value="project">Учебный проект</option>
+              </select>
+            </div>
+      
+            <fieldset class="form-field form-field--wide">
+              <legend>Формат участия</legend>
+              <label class="choice"><input type="radio" name="format" value="class" checked> В аудитории</label>
+              <label class="choice"><input type="radio" name="format" value="online"> Онлайн</label>
+            </fieldset>
+      
+            <div class="form-field form-field--wide">
+              <label for="comment">Комментарий</label>
+              <textarea id="comment" name="comment" rows="5" maxlength="500"></textarea>
+            </div>
+          </div>
+      
+          <label class="choice agreement">
+            <input type="checkbox" name="agreement" required>
+            Я проверил введённые данные *
+          </label>
+          <label class="choice agreement">
+            <input type="checkbox" name="reminders">
+            Я согласен получать учебные напоминания
+        </label>
+          <fieldset class="form-field form-field--wide">
+            <legend>Уровень подготовки</legend>
+            <label class="choice">
+                <input type="radio" name="level" value="beginner" checked> Новичок
+            </label>
+            <label class="choice">
+                <input type="radio" name="level" value="intermediate"> Средний
+            </label>
+            <label class="choice">
+                <input type="radio" name="level" value="advanced"> Продвинутый
+            </label>
+        </fieldset>
+        
+        <!-- Поле даты начала обучения -->
+        <div class="form-field">
+            <label for="start-date">Желаемая дата начала *</label>
+            <!-- placeholder=" " нужен для корректной работы проверки :not(:placeholder-shown) из Шага 5 -->
+            <input id="start-date" name="start-date" type="date" required placeholder=" ">
+        </div>
+          <div class="form-actions">
+            <button type="submit">Отправить заявку</button>
+            <!-- Новая заблокированная кнопка -->
+            <button type="button" class="button-secondary" disabled>Восстановить черновик</button>
+            <button type="reset" class="button-secondary">Очистить</button>
+        </div>
+        </form>
+    
+      </main>
+      
+      <footer class="page-footer"><p>Учебная практика УП.09</p></footer>
+      </body>
+      </html>
+    
+</body>
+</html>

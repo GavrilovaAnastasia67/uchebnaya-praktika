@@ -517,3 +517,211 @@ footer {
  display: inline-block;
  padding: 0.5rem 0.75rem;
 }
+/* Пара 19: базовая мобильная версия */
+*, *::before, *::after { box-sizing: border-box; }
+
+img { max-width: 100%; height: auto; }
+
+.page-container {
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+}
+
+.responsive-hero {
+  display: grid;
+  gap: 1.25rem;
+  align-items: center;
+  padding-block: 1.5rem;
+}
+
+.responsive-hero img {
+  width: 100%;
+  border-radius: 0.75rem;
+}
+
+.feature-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.feature-grid article {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #c9d3dd;
+  border-radius: 0.5rem;
+}
+@media (min-width: 48rem) {
+    .responsive-hero {
+      grid-template-columns: 1.2fr 1fr;
+    }
+  
+    .feature-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 70rem) {
+    .feature-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .responsive-hero {
+      gap: 2.5rem;
+    }
+  }
+  .catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 1rem;
+  }
+  .adaptive-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-block: 3rem;
+    padding-inline: 1rem;
+}
+
+.stat-item {
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border: 1px solid #c9d3dd;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #810b0b;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #333333;
+    word-wrap: break-word;
+}
+
+@media (min-width: 48rem) {
+    .adaptive-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+@media (min-width: 70rem) {
+    .adaptive-stats {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+}
+/* Пара 20: форма */
+.study-form {
+    max-width: 52rem;
+    padding: 1.25rem;
+    border: 1px solid #f3efef;
+    border-radius: 0.75rem;
+    background-color: rgb(196, 207, 218);
+  }
+  
+  .form-grid {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .form-field {
+    display: grid;
+    gap: 0.35rem;
+    min-width: 0;
+  }
+  
+  .form-field label,
+  .form-field legend {
+    font-weight: 700;
+  }
+  
+  .form-field small { color: #ff0000; }
+  .study-form {
+    max-width: 52rem;
+    padding: 1.25rem;
+    border: 1px solid #99abbd;
+    border-radius: 0.75rem;
+    background-color: #f5f5f5; }
+  .form-grid {
+    display: grid;
+    gap: 1rem; }
+  .form-field {
+    display: grid;
+    gap: 0.35rem;
+    min-width: 0; }
+  .form-field label,
+  .form-field legend {
+    font-weight: 700; }
+  .form-field small { color: rgb(163, 24, 24); }
+  .study-form input:not([type="radio"]):not([type="checkbox"]),
+  .study-form select,
+  .study-form textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 0.7rem 0.8rem;
+    border: 1px solid #831111;
+    border-radius: 0.35rem;
+    color: rgb(165, 28, 28) 86, 146);
+    background-color: #ffffff;
+    font: inherit; }
+  .form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem; }
+  .study-form button {
+    min-height: 2.75rem;
+    padding: 0.65rem 1rem;
+    border: 2px solid #a81111;
+    border-radius: 0.35rem;
+    color: #000000;
+    background-color: rgb(153, 21, 21), 31, 31);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer; }
+  .study-form .button-secondary {
+    color: rgb(175, 17, 17), 31, 31);
+    background-color: #ffffff;
+  }
+  .study-form button:hover { background-color: rgb(184, 28, 28) }
+
+  .study-form input:focus-visible,
+  .study-form select:focus-visible,
+  .study-form textarea:focus-visible,
+  .study-form button:focus-visible {
+    outline: 3px solid #f2b134;
+    outline-offset: 2px;
+  }
+  
+  .study-form input:disabled,
+  .study-form button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  .study-form input:required:not(:placeholder-shown):invalid {
+    border-color: #a12828;
+    border-width: 2px;
+  }
+  
+  .study-form input:required:not(:placeholder-shown):valid {
+    border-color: #26734d;
+    border-width: 2px;
+  }
+  @media (min-width: 48rem) {
+    .form-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .form-field--wide {
+      grid-column: 1 / -1;
+    }
+  }
+  
+
+
