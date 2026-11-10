@@ -834,3 +834,29 @@ img { max-width: 100%; height: auto; }
             gap: var(--space-lg);
         }
     }
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: start; /* Выравнивание блоков по верхней границе */
+    }
+    
+    /* 2. Настраиваем внутренности блоков с полями */
+    .form-field {
+        display: flex;
+        flex-direction: column;
+        position: relative; /* Создает контекст позиционирования для примера */
+        margin-bottom: 20px; /* Делает отступ снизу, чтобы пример не налезал на */
+    }
+    
+    /* 3. Опускаем пример почты под поле без влияния на высоту блока */
+    .form-field small {
+        position: absolute;
+        top: 100%;          /* Сдвигает текст ровно под нижнюю границу input */
+        left: 0;
+        margin-top: 4px;   
+        color: #666;     
+    }
+    .form-field-wide {
+        grid-column: 1 / -1;
+    }
