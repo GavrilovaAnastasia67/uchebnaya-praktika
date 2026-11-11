@@ -129,3 +129,12 @@ if (number > 0) { // если число больше нуля
 } else { // иначе
   console.log('Ноль');
 }
+const userNumber = Number(prompt('Введите целое число'));
+
+if (Number.isNaN(userNumber)) {
+  console.log('Это не число');
+} else if (userNumber % 2 === 0) {
+  console.log(userNumber + ' - чётное');
+} else {
+  console.log(userNumber + ' - нечётное');
+}
