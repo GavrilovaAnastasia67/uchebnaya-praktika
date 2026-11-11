@@ -112,3 +112,20 @@ console.log(myPhrase.length);
 console.log(myPhrase.slice(0, 5));
 console.log(myPhrase.toUpperCase());
 console.log(myPhrase.includes('JavaScript'));
+// ===== Пара 23: условия и циклы=====.
+// Задача 5. Чётное или нечётное, знак числа
+const number = 17;
+
+if (number % 2 === 0) { // если остаток в делении остается 0 - то четное : 10 делить на 2 = 5 . Остаток 0 - число четное.
+  console.log(number + ' - чётное');
+} else {
+  console.log(number + ' - нечётное');
+}
+
+if (number > 0) { // если число больше нуля
+  console.log('Положительное');
+} else if (number < 0) { // если число меньше нуля
+  console.log('Отрицательное');
+} else { // иначе
+  console.log('Ноль');
+}
