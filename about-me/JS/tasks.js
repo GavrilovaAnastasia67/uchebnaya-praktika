@@ -138,3 +138,111 @@ if (Number.isNaN(userNumber)) {
 } else {
   console.log(userNumber + ' - нечётное');
 }
+// Задача 6. Оценка по баллам
+const score = 78; // балл
+let mark;
+if (score < 0 || score > 100) {
+if (score >= 90) { // если баллов больше или равно 90 выведет 5
+  mark = 5;
+} else if (score >= 75) { // если баллов больше или равно 75 выведет 4
+  mark = 4;
+} else if (score >= 60) { // если баллов больше или равно 60 выведет 3
+  mark = 3;
+} else { // иначе 2
+  mark = 2;
+}
+
+console.log(`Баллов: ${score}, оценка: ${mark}`);
+}
+// Задача 7. День недели
+const dayNumber = 3; // день недели
+let dayName;
+
+switch (dayNumber) {
+  case 1:
+    dayName = 'понедельник';
+    break;
+  case 2:
+    dayName = 'вторник';
+    break;
+  case 3:
+    dayName = 'среда';
+    break;
+  case 4:
+    dayName = 'четверг';
+    break;
+  case 5:
+    dayName = 'пятница';
+    break;
+  case 6:
+    dayName = 'суббота';
+    break;
+  case 7:
+    dayName = 'воскресенье';
+    break;
+  default:
+    dayName = 'такого дня нет';
+}
+
+console.log(`День ${dayNumber}: ${dayName}`);
+
+const isWeekend = dayNumber === 6 || dayNumber === 7; // проверка на выходной день
+console.log('Выходной:', isWeekend);
+
+const monthNumber = Number(prompt('Введите номер месяца от 1 до 12'));
+let season;
+
+switch (monthNumber) {
+  case 12:
+  case 1:
+  case 2:
+    season = 'зима';
+    break;
+  case 3:
+  case 4:
+  case 5:
+    season = 'весна';
+    break;
+  case 6:
+  case 7:
+  case 8:
+    season = 'лето';
+    break;
+  case 9:
+  case 10:
+  case 11:
+    season = 'осень';
+    break;
+  default:
+    season = 'некорректный номер месяца';
+}
+
+console.log(`Месяц ${monthNumber}: ${season}`);
+// Задача 8. Циклы
+// Цикл состоит из трёх частей:
+// let i = 1  Создаём счётчик со значением 1
+// i <= 10    Проверяем условие продолжения цикла
+// i++        Увеличиваем счётчик на 1
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`7 * ${i} = ${7 * i}`);
+  // Выводим таблицу умножения на 7
+  // ${i} — текущее значение счётчика
+  // ${7 * i} — результат умножения 7 на i
+}
+// Создаём константу n со значением 5
+// Это последнее число, которое нужно прибавить
+const n = 5;
+let sum = 0; // Создаём переменную sum для хранения суммы. Изначально сумма равна 0
+let k = 1; // Создаём счётчик k со значением 1
+while (k <= n) { // Цикл выполняется, пока k меньше или равно n
+  sum = sum + k; // Прибавляем текущее значение k к сумме
+  k = k + 1; // Увеличиваем счётчик k на 1
+}
+console.log(`Сумма чисел от 1 до ${n}: ${sum}`); // Выводим итоговую сумму чисел от 1 до 5
+// Таблица умножения на счастливое число (5)
+const luckyNumber = 5;
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`${luckyNumber} × ${i} = ${luckyNumber * i}`);
+}
