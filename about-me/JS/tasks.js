@@ -246,3 +246,156 @@ const luckyNumber = 5;
 for (let i = 1; i <= 10; i++) {
   console.log(`${luckyNumber} × ${i} = ${luckyNumber * i}`);
 }
+// ===== Пара 24: функции и массивы =====.
+// Задача 9. Функции
+
+// Создаём функцию greet с параметром name
+// Параметр name принимает имя пользователя
+function greet(name) {
+
+  // Возвращаем строку приветствия
+  // ${name} подставляет переданное имя
+  return `Привет, ${name}!`;
+}
+
+// Вызываем функцию, передаём имя "Анна"
+// console.log() выводит результат в консоль
+console.log(greet('Анна'));
+
+// Повторно вызываем функцию с именем "Пётр"
+console.log(greet('Пётр'));
+
+
+// Создаём функцию isEven с параметром number
+// Функция проверяет, является ли число чётным
+function isEven(number) {
+
+  // Оператор % находит остаток от деления
+  // Если остаток от деления на 2 равен 0,
+  // число является чётным и возвращается true
+  // Иначе возвращается false
+  return number % 2 === 0;
+}
+
+// Проверяем число 10
+// 10 % 2 = 0, поэтому результат true
+console.log(isEven(10));
+
+// Проверяем число 7
+// 7 % 2 = 1, поэтому результат false
+console.log(isEven(7));
+function test() {
+  const inside = 'внутри';
+  console.log(inside);
+}
+test();
+// console.log(inside);
+function getMark(points) {
+  if (points >= 90) {
+    return 5;
+  } else if (points >= 75) {
+    return 4;
+  } else if (points >= 60) {
+    return 3;
+  } else {
+    return 2;
+  }
+}
+
+console.log(getMark(95));
+console.log(getMark(80));
+console.log(getMark(65));
+console.log(getMark(30));
+// Задача 10. Стрелочные функции
+const square = (x) => x * x;
+const celsiusToFahrenheit = (c) => c * 9 / 5 + 32;
+const addNumbers = (a, b) => a + b;
+
+console.log(square(7));
+console.log(celsiusToFahrenheit(20));
+console.log(addNumbers(2, 3));
+// Задача 11. Массивы
+const subjects = ['Математика', 'Информатика', 'Физика'];
+console.log(subjects.length); // количество предметов
+console.log(subjects[0]); // предмет с индексом 0 = Математика
+console.log(subjects[subjects.length - 1]);
+
+subjects.push('История'); // добавляет элемент в конец массива
+console.log(subjects);
+const removed = subjects.pop(); // .pop удаляет последний элемент
+console.log('Удалили:', removed);
+
+for (const subject of subjects) {
+  console.log('Предмет: ' + subject);
+}
+
+const grades = [5, 4, 3, 5, 4];
+
+function getAverage(list) {
+  let total = 0;
+  for (const value of list) {
+    total += value;
+  }
+  return total / list.length;
+}
+console.log('Средняя оценка:', getAverage(grades).toFixed(2));
+
+let best = grades[0];
+for (const value of grades) {
+  if (value > best) {
+    best = value;
+  }
+}
+console.log('Лучшая оценка:', best);
+// Опыт: обращение к несуществующему элементу
+console.log(subjects[10]);
+
+// Самостоятельно: поиск наименьшей оценки
+let worst = grades[0];
+for (const value of grades) {
+  if (value < worst) {
+    worst = value;
+  }
+}
+console.log('Худшая оценка:', worst);
+// Задача 12. map и filter
+const numbers = [3, 8, 12, 5, 20, 1];
+const doubled = numbers.map((x) => x * 2);
+const big = numbers.filter((x) => x > 5);
+console.log(doubled);
+console.log(big);
+console.log(numbers);
+
+const names = ['Анна', 'Борис', 'Алексей', 'Вера'];
+const startsWithA = names.filter((item) => item.startsWith('А'));
+console.log(startsWithA.join(', '));
+const upperNames = names.map((item) => item.toUpperCase());
+console.log(upperNames);
+// 1. Отбираем оценки 4 и выше и выводим их количество
+const goodGrades = grades.filter((grade) => grade >= 4);
+console.log('Количество хороших оценок:', goodGrades.length);
+
+// 2. Создаём массив длин названий предметов
+const lengths = subjects.map((item) => item.length);
+console.log('Длины названий предметов:', lengths);
+// Самостоятельная часть шаг 6
+function analyzeGrades(list) {
+  const count = list.length;
+  const average = getAverage(list);
+  const bestGrade = Math.max(...list);
+  const worstGrade = Math.min(...list);
+  const twosCount = list.filter((grade) => grade === 2).length;
+
+  let result = 'Незачёт';
+  if (average >= 3.5 && twosCount === 0) {
+    result = 'Зачёт';
+  }
+
+  console.log('Количество оценок:', count);
+  console.log('Средний балл:', average.toFixed(2));
+  console.log('Лучшая оценка:', bestGrade, '| Худшая оценка:', worstGrade);
+  console.log('Итог:', result);
+}
+
+analyzeGrades([5, 4, 5, 4, 5]);
+analyzeGrades([3, 2, 4, 3, 3]);
