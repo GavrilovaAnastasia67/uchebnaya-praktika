@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка форм</title>
+</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 15px;
+        }
+    
+        label {
+            display: block;
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+    
+        input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    
+        button {
+            margin-top: 15px;
+            margin-right: 6px;
+            padding: 8px 14px;
+            cursor: pointer;
+        }
+    
+        .error {
+            color: red;
+        }
+    
+        .success {
+            color: green;
+        }
+    
+        body.dark {
+            background-color: #16213e;
+            color: #e2e8f0;
+        }
+    
+        body.dark input,
+        body.dark button {
+            background-color: #0f3460;
+            color: #ffffff;
+            border: 1px solid #533483;
+        }
+    
+        body.dark {
+            background-color: #383c46;
+            color: #e2e8f0;
+        }
+    
+        body.dark input,
+        body.dark button {
+            background-color: #2b3644;
+            color: #ffffff;
+            border: 1px solid #190f27;
+        }
+    </style>
+    <body>
+ <script src="js/form.js" defer></script>
+
+<body>
+
+    <h1>Регистрация студента</h1>
+
+    <form id="registration-form" novalidate>
+
+        <label for="student-name">Имя</label>
+        <input type="text" id="student-name">
+
+        <label for="student-email">Email</label>
+        <input type="email" id="student-email">
+
+        <label for="student-password">Пароль</label>
+        <input type="password" id="student-password">
+
+        <button type="submit">Проверить данные</button>
+
+    </form>
+
+    <p id="result"></p>
+
+    <h2>Настройки пользователя</h2>
+    <div>
+    <button id="save-name">Сохранить имя</button>
+    <button id="show-name">Показать имя</button>
+    <button id="delete-name">Удалить имя</button>
+    </div>
+    <div>
+        <label for="student-group">Группа:</label>
+        <input type="text" id="student-group" placeholder="Например, ИС-1-25">
+        <button id="save-group">Сохранить группу</button>
+        <button id="show-group">Показать группу</button>
+      </div>
+    <p id="saved-result"></p>
+
+    <h2>Тема оформления</h2>
+
+    <button id="theme-btn">Переключить тему</button>
+    <p id="theme-status"></p>
+    <hr>
+
+  <!-- Шаг 6: Самостоятельная итоговая часть -->
+  <h2>Мои настройки</h2>
+  <div>
+    <label for="fav-lang">Любимый язык программирования:</label><br>
+    <input type="text" id="fav-lang" placeholder="Например, JavaScript">
+  </div>
+  <div>
+    <button id="save-lang">Сохранить</button>
+    <button id="load-lang">Загрузить</button>
+    <button id="clear-lang">Очистить</button>
+  </div>
+  <p id="lang-result"></p>
+
+</body>
+</html>
