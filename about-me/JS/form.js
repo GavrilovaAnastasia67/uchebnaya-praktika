@@ -111,6 +111,7 @@ deleteBtn.addEventListener('click', function () {
 const groupInput = document.querySelector('#student-group');
 const saveGroupBtn = document.querySelector('#save-group');
 const showGroupBtn = document.querySelector('#show-group');
+const deleteGroupBtn = document.querySelector('#delete-group');
 
 saveGroupBtn.addEventListener('click', function () {
   const group = groupInput.value.trim();
@@ -132,6 +133,11 @@ showGroupBtn.addEventListener('click', function () {
   } else {
     savedResult.textContent = 'Ваша группа: ' + group;
   }
+});
+
+deleteGroupBtn.addEventListener('click', function () {
+  localStorage.removeItem('studentGroup');
+  savedResult.textContent = 'Группа удалена';
 });
 // ==========================================
 // ЗАДАЧА 4. ПЕРЕКЛЮЧЕНИЕ ТЕМЫ
