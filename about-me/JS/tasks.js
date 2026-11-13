@@ -186,7 +186,7 @@ switch (dayNumber) {
 
 console.log(`День ${dayNumber}: ${dayName}`);
 
-const isWeekend = dayNumber === 6 || dayNumber === 7; // проверка на выходной день
+const isWeekend = dayNumber === 6 || dayNumber === 7;
 const isStudyDay = dayNumber >= 1 && dayNumber <=5;
 
 console.log('Выходной:', isWeekend);
