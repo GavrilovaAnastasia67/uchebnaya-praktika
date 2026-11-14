@@ -63,6 +63,7 @@
     echo "<br>";
     
     var_dump($isStudent);
+    echo "<br>";
         $price = 1500;
         $product = "Ноутбук";
         $available = false;
