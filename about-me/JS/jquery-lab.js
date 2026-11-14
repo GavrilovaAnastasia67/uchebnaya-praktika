@@ -7,7 +7,7 @@ $('#change-btn').click(function () {
     $('#message').css('font-size', '20px');
     $('#message').text('Я изучаю jQuery!');
 });
-// Задача 2. Скрытие и показ (база + самостоятельно)
+// Задача 2. Скрытие и показ 
 $('#hide-btn').click(function () {
     $('#info-box').hide();
   });
@@ -19,7 +19,7 @@ $('#hide-btn').click(function () {
   $('#toggle-btn').click(function () {
     $('#info-box').toggle();
   });
-  // Задача 3. Работа с input (база + самостоятельно)
+  // Задача 3. Работа с input
 $('#hello-btn').click(function () {
     const name = $('#name-input').val().trim();
   
@@ -46,8 +46,6 @@ $('#load-btn').click(function () {
       method: 'GET',
       success: function (users) {
         $('#users').empty();
-  
-        // Выводим количество полученных пользователей
         $('<p>')
           .text('Найдено пользователей: ' + users.length)
           .css('font-weight', 'bold')
@@ -56,7 +54,7 @@ $('#load-btn').click(function () {
         for (const user of users) {
           const card = $('<div>')
             .addClass('card')
-            .css('background-color', '#f0f8ff'); // Измененный фон карточки
+            .css('background-color', '#f0f8ff');
   
           $('<h3>').text(user.name).appendTo(card);
           $('<p>').text('Email: ' + user.email).appendTo(card);
@@ -71,7 +69,7 @@ $('#load-btn').click(function () {
       }
     });
   });
-  // Шаг 6. Итоговое самостоятельное задание
+  // Итоговое самостоятельное задание
 $('#course-btn').click(function () {
     $('#course-subject').text('Дисциплина: Веб-разработка');
     $('#course-group').text('Группа: ИС-1-25'); 
