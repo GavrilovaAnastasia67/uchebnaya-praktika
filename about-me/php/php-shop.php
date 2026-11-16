@@ -92,6 +92,27 @@ var_dump($quantity);
 echo "<br>";
 var_dump($discount);
 echo "<br>";
+
+var_dump($product2);
+echo "<br>";
+var_dump($price2);
+echo "<br>";
+var_dump($quantity2);
+echo "<br>";
+var_dump($discount2);
+echo "<br>";
+
+var_dump($product3);
+echo "<br>";
+var_dump($price3);
+echo "<br>";
+var_dump($quantity3);
+echo "<br>";
+var_dump($discount3);
+echo "<br>";
+
+$inStock = true;
+$rating = 4.7;
 var_dump($inStock);
 echo "<br>";
 var_dump($rating);
